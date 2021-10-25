@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -17,7 +21,7 @@ img {
 /*========= Variaveis ==========*/
 
 :root {
-  --header-height: 6.5rem;
+  --header-height: 4.5rem;
 
   /* colors */
   --hue: 215;
@@ -38,7 +42,7 @@ body {
   background: var(--body-color);
 }
 
-h1 {
+.title {
   font: 700 1.875rem 'Poppins', Sans-Serif;
   color: var(--title-color);
   -webkit-font-smoothing: antialiased;
@@ -82,14 +86,6 @@ h1 {
   background-color: var(--body-color);
 }
 
-nav {
-  height: 4.5rem;
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
 .button {
   background-color: var(--base-color-alt);
   color: var(--text-color-light);
@@ -105,6 +101,12 @@ nav {
   background-color: var(--base-color);
 }
 
+main {
+  margin-top: calc(var(--header-height) + 2rem);
+}
+
+/*=========== Logo =============*/
+
 .logo span {
   color: var(--base-color-alt);
 }
@@ -114,8 +116,74 @@ nav {
   color: var(--title-color);
 }
 
-main {
-  margin-top: var(--header-height);
+/*========== navigation ==========*/
+
+nav {
+  height: 4.5rem;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a {
+  transition: color 0.3s;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: var(--base-color-alt);
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0%;
+  height: 0.125rem;
+  background: var(--base-color-alt);
+
+  position: absolute;
+  left: 0;
+  bottom: -1.5rem;
+
+  transition: width 0.2s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/*========= Show Menu ==========*/
+
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+
+  background: var(--body-color);
+
+  height: 100vh;
+  width: 100vw;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav.show .menu {
+  display: grid;
+  place-content: center;
+}
+
+nav.show ul.grid {
+  gap: 4rem;
 }
 
 /*========= Home =========*/
