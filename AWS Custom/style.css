@@ -208,6 +208,7 @@ nav.show div.icon-close {
 }
 
 /*========= Home =========*/
+
 #home {
   overflow: hidden;
 }
@@ -251,5 +252,48 @@ nav.show div.icon-close {
 }
 
 #home .text p {
+  margin-bottom: 2rem;
+}
+
+/*======== About ========*/
+
+#about {
+  overflow: hidden;
+}
+
+#about .container {
+  margin: 0;
+}
+
+#about .image {
+  position: relative;
+}
+
+#about .image::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: var(--base-color-second);
+  position: absolute;
+  top: -10.8%;
+  left: -50.8%;
+  z-index: 0;
+}
+
+#about .image img {
+  position: relative;
+}
+
+#about .text {
+  text-align: center;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+#about .text h1 {
+  margin-bottom: 1rem;
+}
+
+#about .text p {
   margin-bottom: 2rem;
 }
