@@ -36,6 +36,11 @@ img {
 }
 
 /*========= Base =========*/
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font: 400 1rem 'DM Sans', Sans-Serif;
   color: var(--text-color);
@@ -105,6 +110,10 @@ body {
   top: 0;
   left: 0;
   background-color: var(--body-color);
+}
+
+#header.scroll {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.09);
 }
 
 .button {
@@ -180,6 +189,12 @@ nav ul li a:hover::after {
 nav .menu {
   opacity: 0;
   visibility: hidden;
+  top: -20rem;
+  transition: 0.3s;
+}
+
+nav .menu ul {
+  display: none;
 }
 
 /*========= Show Menu ==========*/
@@ -196,11 +211,13 @@ nav.show .menu {
   position: fixed;
   top: 0;
   left: 0;
-}
 
-nav.show .menu {
   display: grid;
   place-content: center;
+}
+
+nav.show .menu ul {
+  display: grid;
 }
 
 nav.show ul.grid {
