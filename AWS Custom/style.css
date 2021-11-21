@@ -7,6 +7,7 @@
 
 a {
   text-decoration: none;
+  font: 'DM Sans', Sans-Serif;
 }
 
 ul {
@@ -83,6 +84,25 @@ body {
   gap: 2rem;
 }
 
+.button {
+  background-color: var(--base-color-alt);
+  color: var(--text-color-light);
+
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.31rem;
+
+  transition: background 0.3s;
+
+  font: 500 1rem 'DM Sans', Sans-Serif;
+}
+
+.button:hover {
+  background-color: var(--base-color);
+}
+
 .section {
   padding: 5rem 0;
 }
@@ -116,21 +136,6 @@ body {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.09);
 }
 
-.button {
-  background-color: var(--base-color-alt);
-  color: var(--text-color-light);
-  height: 3.5rem;
-  display: inline-flex;
-  align-items: center;
-  padding: 0 2rem;
-  border-radius: 0.31rem;
-  transition: background 0.3s;
-}
-
-.button:hover {
-  background-color: var(--base-color);
-}
-
 main {
   margin-top: calc(var(--header-height) + 2rem);
 }
@@ -142,7 +147,7 @@ main {
 }
 
 .logo {
-  font: 700 175% 'Poppins', Sans-Serif;
+  font: 700 1.875rem 'Poppins', Sans-Serif;
   color: var(--title-color);
 }
 
@@ -427,4 +432,37 @@ nav.show div.icon-close {
 }
 .swiper-pagination-bullet-active {
   background: var(--base-color-alt);
+}
+
+.icon-phone {
+  color: var(--base-color-alt);
+}
+
+/*======== Contact ========*/
+
+#contact .grid {
+  gap: 4rem;
+}
+
+#contact .text p {
+  margin-bottom: 2rem;
+}
+
+#contact .button i,
+#contact ul li i {
+  font-size: 1.5rem;
+  margin-right: 0.675rem;
+}
+
+#contact ul.grid {
+  gap: 2rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+}
+
+#contact ul li i {
+  color: var(--base-color-alt);
 }
