@@ -142,7 +142,7 @@ main {
 }
 
 .logo {
-  font: 700 1.875rem 'Poppins', Sans-Serif;
+  font: 700 175% 'Poppins', Sans-Serif;
   color: var(--title-color);
 }
 
@@ -338,6 +338,7 @@ nav.show div.icon-close {
 }
 
 .card {
+  margin-bottom: 1rem;
   padding: 3.625rem 2rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.09);
   border-bottom: 0.25rem solid var(--base-color-alt);
@@ -359,4 +360,71 @@ nav.show div.icon-close {
 
 #icon {
   font-size: 7rem;
+}
+
+/*======== Testimonials ========*/
+
+#feedbacks {
+  background-color: #fff;
+}
+
+#feedbacks header {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 0;
+}
+
+#feedbacks blockquote {
+  padding: 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.09);
+  border: 0.31rem;
+}
+#feedbacks blockquote p {
+  position: relative;
+  text-indent: 1.875rem;
+  color: var(--title-color);
+
+  margin-bottom: 1.5rem;
+}
+
+#feedbacks blockquote p span {
+  font: 700 2.5rem serif;
+
+  position: absolute;
+  top: -0.25rem;
+  left: -1.875rem;
+
+  color: var(--base-color-alt);
+}
+
+#feedbacks cite {
+  display: flex;
+  align-items: center;
+}
+
+#feedbacks cite img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  clip-path: circle();
+  margin-right: 0.5rem;
+}
+
+#feedbacks .container {
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+}
+/* Swiper */
+
+.swiper-slide {
+  height: auto;
+  padding: 4rem 1rem;
+}
+
+.swiper-pagination {
+  position: absolute;
+}
+.swiper-pagination-bullet-active {
+  background: var(--base-color-alt);
 }

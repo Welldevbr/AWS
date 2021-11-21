@@ -4,20 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- styles -->
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- STYLES -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- icons -->
+    <!-- Icons -->
     <link rel="stylesheet" href="assets/fonts/style.css">
 
-    <!-- fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+
 
     <title>AWS Soluções</title>
   </head>
@@ -42,7 +49,7 @@
     </header>
 
     <main>
-      <!-- Section 1 -->
+      <!-- Home -->
       <section class="section" id="home">
         <div class="container grid">
           <div class="image">
@@ -60,9 +67,8 @@
           </div>
         </div>
       </section>
-      <!-- /Section 1 -->
       <div class="divider-1"></div>
-      <!-- Section 2 -->
+      <!-- About -->
       <section class="section" id="about">
         <div class="container grid">
             <div class="image">
@@ -87,9 +93,8 @@
           </div>
         </div>
       </section>
-      <!-- /Section 2 -->
       <div class="divider-2"></div>
-      <!-- Section 3-->
+      <!-- Services -->
       <section class="section" id="services">
         <div class="container grid">
           <header>
@@ -104,39 +109,85 @@
               <i class="icon-coffee_cup_icon"></i>
               <h3 class="title">Personalizados</h3>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat obcaecati doloribus magnam at id deleniti quisquam maxime pariatur laudantium voluptatibus distinctio ducimus, corrupti, perspiciatis doloremque dignissimos. Nesciunt rem cum harum.
+                Temos varias opções em personalizados para todos os gostos, desde canecas customizadas até , copos, taças, baldes de pipoca ou gelo, balas, cartões de visita, cartões de agradecimento e muito mais.
               </p>
             </div>
             <div class="card">
               <i class="icon-Icone" id="icon"></i>
               <h3 class="title">Design Gráfico</h3>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam molestiae veritatis animi, necessitatibus architecto, voluptas ea quod voluptatem perspiciatis atque minus magni culpa alias quibusdam, tempora optio commodi! Reiciendis, porro.
+                Temos um serviço completo de Design Gráfico com proficionais esxelentes e com preços que cabem no seu bolso
               </p>
             </div>
           </div>
         </div>
       </section>
-      <!-- /Section 3 -->
       <div class="divider-1"></div>
-      <!-- Section 4 -->
-      <section class="section" id="products">
-        <div class="container grid">
-          Produtos
+      <!-- Feedbecks -->
+      <section class="section" id="feedbacks">
+        <div class="container">
+          <header>
+            <h2 class="title">Feedbecks de quem já conhecem o nosso trabalho.</h2>
+          </header>
+          <div class="testmonials swiper-container">
+            <div class="swiper-wrapper">
+              <div class="testmonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt incidunt quisquam distinctio rem autem! Eligendi perferendis accusantium qui excepturi. Tempora quis, doloribus expedita velit officiis veniam. Recusandae ab libero sunt.
+                  </p>
+                  <cite>
+                    <img src="/assets/fotos/andreia.jpg" alt="Foto Andreia">
+                    Andréia Alves
+                  </cite>
+                </blockquote>
+              </div>
+              <div class="testmonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt incidunt quisquam distinctio rem autem! Eligendi perferendis accusantium qui excepturi. Tempora quis, doloribus expedita velit officiis veniam. Recusandae ab libero sunt.
+                  </p>
+                  <cite>
+                    <img src="/assets/fotos/andreia.jpg" alt=" Foto de Cecilia">
+                    Cecilia Keila
+                  </cite>
+                </blockquote>
+              </div>
+              <div class="testmonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt incidunt quisquam distinctio rem autem! Eligendi perferendis accusantium qui excepturi. Tempora quis, doloribus expedita velit officiis veniam. Recusandae ab libero sunt.
+                  </p>
+                  <cite>
+                    <img src="/assets/fotos/joicy.jpg" alt="Foto de Joicy">
+                    Joicy Vieira
+                  </cite>
+                </blockquote>
+              </div>
+            </div>
+              
+          </div>
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
         </div>
       </section>
-      <!-- /Section 4 -->
       <div class="divider-2"></div>
-      <!-- Section 5 -->
+      <!-- Contact -->
       <section class="section" id="contact">
         <div class="container grid">
           Contato
         </div>
       </section>
-      <!-- /Section 5 -->
     </main>
     <footer></footer>
 
+    <!-- Swiper.js -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- Main.js -->
     <script src="main.js"></script>
   </body>
 </html>
