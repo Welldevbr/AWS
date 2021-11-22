@@ -39,6 +39,7 @@ img {
 /*========= Base =========*/
 
 html {
+  /* não esta funcionando no chrome apenas firefox*/
   scroll-behavior: smooth;
 }
 
@@ -149,6 +150,10 @@ main {
 .logo {
   font: 700 1.875rem 'Poppins', Sans-Serif;
   color: var(--title-color);
+}
+
+.logo-alt span {
+  color: var(--text-color-light);
 }
 
 /*========== navigation ==========*/
@@ -465,4 +470,68 @@ nav.show div.icon-close {
 
 #contact ul li i {
   color: var(--base-color-alt);
+}
+
+/*====== Footer =========*/
+
+footer {
+  background: var(--base-color-alt);
+}
+
+footer .grid {
+  gap: 2rem;
+}
+
+footer .brand .logo {
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+footer .brand p {
+  color: var(--body-color);
+  margin-bottom: 0.75rem;
+}
+
+footer .social a {
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+
+  margin-right: 1.5rem;
+
+  display: inline-block;
+  transition: 0.3s;
+}
+
+footer .social a:hover {
+  transform: translateY(-0.8rem);
+}
+
+/* Arrow */
+
+.back-to-top {
+  background: var(--base-color-alt);
+  color: var(--body-color);
+
+  font-size: 1.5rem;
+  line-height: 0;
+
+  padding: 0.675rem;
+
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+
+  clip-path: circle();
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: 0.3s;
+  transform: translateY(100%);
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
 }
