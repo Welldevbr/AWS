@@ -1,4 +1,4 @@
-// Open and Close: Menu hamburguer
+// Abrir e Fechar: Menu hamburguer
 
 const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
@@ -9,7 +9,7 @@ for (const element of toggle) {
   })
 }
 
-// Close Click intem
+// Fechar aou clicar em um item do menu
 
 const links = document.querySelectorAll('nav ul li a')
 
@@ -19,7 +19,7 @@ for (const link of links) {
   })
 }
 
-// change page header when scrolling
+// Mudar o header da pagina quando der scroll
 
 function changeHeaderPage() {
   const header = document.querySelector('#header')
@@ -32,7 +32,7 @@ function changeHeaderPage() {
   }
 }
 
-// Feedbacks slider
+// Feedbacks slider de comentarios
 
 const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
@@ -43,7 +43,7 @@ const swiper = new Swiper('.swiper-container', {
   keyboard: true
 })
 
-// Scrollreveal
+// Scrollreveal - Surgimento de itens da pagina
 
 const scrollReveal = ScrollReveal({
   origin: 'top',
@@ -63,7 +63,7 @@ footer .brand, footer .social
   { interval: 100 }
 )
 
-// Back to top
+// Voltar para o topo
 
 const backToTopButton = document.querySelector('.back-to-top')
 const animationClass = 'show'
@@ -79,7 +79,7 @@ function backToTop() {
   }
 }
 
-// Scroll events
+// Scroll Events
 
 window.addEventListener('scroll', function () {
   backToTop(), changeHeaderPage()

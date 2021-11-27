@@ -34,6 +34,15 @@ img {
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
+
+  /* fonts */
+
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
+  --text-font-size: 1.5rem;
+
+  --title-font: 'Poppins', Sans-Serif;
+  --body-font: 'DM Sans', Sans-Serif;
 }
 
 /*========= Base =========*/
@@ -44,13 +53,13 @@ html {
 }
 
 body {
-  font: 400 1rem 'DM Sans', Sans-Serif;
+  font: 400 1rem var(--body-font);
   color: var(--text-color);
   background: var(--body-color);
 }
 
 .title {
-  font: 700 1.875rem 'Poppins', Sans-Serif;
+  font: 700 var(--title-font-size) var(--title-font);
   color: var(--title-color);
   -webkit-font-smoothing: antialiased;
 }
@@ -97,7 +106,7 @@ body {
 
   transition: background 0.3s;
 
-  font: 500 1rem 'DM Sans', Sans-Serif;
+  font: 500 1rem var(--body-font);
 }
 
 .button:hover {
@@ -105,11 +114,15 @@ body {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: calc(5rem + var(--header-height)) 0;
 }
 
 .section .title {
   margin-bottom: 1rem;
+}
+
+.section .subtitle {
+  font-size: var(--subtitle-font-size);
 }
 
 .section header {
@@ -137,10 +150,6 @@ body {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.09);
 }
 
-main {
-  margin-top: calc(var(--header-height) + 2rem);
-}
-
 /*=========== Logo =============*/
 
 .logo span {
@@ -148,7 +157,7 @@ main {
 }
 
 .logo {
-  font: 700 1.875rem 'Poppins', Sans-Serif;
+  font: 700 var(--title-font-size) var(--title-font);
   color: var(--title-color);
 }
 
@@ -238,7 +247,7 @@ nav.show ul.grid {
 
 .toggle {
   color: var(--base-color-alt);
-  font-size: 1.5rem;
+  font-size: var(--text-font-size);
   cursor: pointer;
 }
 
@@ -364,7 +373,7 @@ nav.show div.icon-close {
 }
 
 .card .title {
-  font-size: 1.5rem;
+  font-size: var(--text-font-size);
   margin-bottom: 0.75rem;
 }
 
@@ -455,7 +464,7 @@ nav.show div.icon-close {
 
 #contact .button i,
 #contact ul li i {
-  font-size: 1.5rem;
+  font-size: var(--text-font-size);
   margin-right: 0.675rem;
 }
 
@@ -478,6 +487,10 @@ footer {
   background: var(--base-color-alt);
 }
 
+footer.section {
+  padding: 4rem 0;
+}
+
 footer .grid {
   gap: 2rem;
 }
@@ -492,12 +505,17 @@ footer .brand p {
   margin-bottom: 0.75rem;
 }
 
-footer .social a {
-  font-size: 1.5rem;
+footer i {
+  font-size: var(--text-font-size);
   color: var(--text-color-light);
+}
 
-  margin-right: 1.5rem;
+footer .social {
+  grid-auto-flow: column;
+  width: fit-content;
+}
 
+footer .social a {
   display: inline-block;
   transition: 0.3s;
 }
@@ -512,7 +530,7 @@ footer .social a:hover {
   background: var(--base-color-alt);
   color: var(--body-color);
 
-  font-size: 1.5rem;
+  font-size: var(--text-font-size);
   line-height: 0;
 
   padding: 0.675rem;
@@ -534,4 +552,120 @@ footer .social a:hover {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Responsividade */
+
+@media (min-width: 1200px) {
+  /*Reausible Classes*/
+  .button {
+    height: 3.125rem;
+  }
+
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section {
+    padding: 10rem 0;
+  }
+
+  .section header,
+  #feedbacks header {
+    max-width: 32rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  /* Navigatino */
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+
+  nav .icon-menu {
+    display: none;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul li a.title {
+    font: 700 1rem var(--title-font);
+  }
+
+  /* Home */
+
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  #home .image {
+    order: 1;
+  }
+
+  #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+  }
+
+  /* About */
+  #about .container {
+    margin: 0 auto;
+    grid-auto-flow: column;
+  }
+
+  /* services */
+  .cards {
+    grid-auto-flow: column;
+    justify-content: space-between;
+  }
+
+  /* Feedbacks */
+  #feedbacks .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #feedbacks .testimunials {
+    grid-auto-flow: column;
+    justify-content: space-between;
+  }
+
+  #feedbacks blockquote {
+    max-width: 40rem;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Contact */
+  #contact .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  #contact .text {
+    max-width: 24rem;
+  }
+
+  /* Footer */
+  footer .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+  }
+  main {
+    margin-top: calc(var(--header-height));
+  }
 }
